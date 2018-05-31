@@ -1,0 +1,319 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Afya Plateform</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="assets/css/mdb.min.css" rel="stylesheet">
+    <link href="assets/css/load.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style rel="stylesheet">
+    select {
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;       /* remove default arrow */
+}
+select::-ms-expand { 
+    display: none; /* hide the default arrow in ie10 and ie11 */
+} 
+        /* TEMPLATE STYLES */
+        /* Necessary for full page carousel*/
+        #map {
+        height: 90%;
+        width:100%;
+      }
+        html,
+        body {
+            height: 100%;
+        }
+        /* Navigation*/
+        
+        .navbar {
+            background-color: transparent;
+        }
+        
+        .top-nav-collapse {
+            background-color: #304a74;
+        }
+        
+        footer.page-footer {
+            background-color: #304a74;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #4285F4;
+            }
+        }
+        
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+        /* Carousel*/
+        
+        .carousel {
+            height: 50%;
+        }
+        
+        @media (max-width: 776px) {
+            .carousel {
+                height: 100%;
+            }
+        }
+        
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        
+        /*Caption*/
+        
+        .flex-center {
+            color: #fff;
+        }
+        .menu-left{
+            position:fixed;
+            width:25%;
+            height:100%;
+            border-right:1px solid silver;
+            display:inline-block;
+            padding:1em;
+        }
+        .viewer{
+            height:100%;
+            width:100%;
+            float:right;
+            display:block;
+            position:fixed;
+        }
+        h1{
+            color:white;
+            text-align:center;
+            position:relative;
+            top:45%;
+        }
+        .bgBasic{
+            background-color:#FFF;
+        }
+        #blockLoader{
+              display: block;
+              position: absolute;
+              width: 100%;
+              margin: 0 auto;
+              top: 12em;
+              height: 4em;
+              padding-top: 1.5em;
+              text-align: center;
+    }
+    /* Progress Bar */
+.progress {
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px;
+  background-clip: padding-box;
+  margin: 0.5rem 0 1rem 0;
+  overflow: hidden; }
+  .progress .determinate {
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    bottom: 0;
+    background-color: #5bc0de;
+    transition: width .3s linear; }
+  .progress .indeterminate {
+    background-color: #5bc0de; }
+    .progress .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+              animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+    .progress .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+              animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+              animation-delay: 1.15s; }
+
+@-webkit-keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; } }
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; } }
+@-webkit-keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; } }
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; } }
+
+    </style>
+
+</head>
+
+<body ng-app="afyaApp" ng-controller="afyaGeo">
+<!--Navbar-->
+<nav class="navbar navbar-toggleable-md navbar-dark bgBasic" style="height:70px">
+
+    
+         
+         <div class="collapse navbar-collapse"  id="navbarNav3">
+                            
+                            <h4 style="color:#3CB371;position:relative;top:0.30em;width:auto;">afya platform</h4>
+                           
+                          
+                                    <ul class="nav navbar-nav" style="position:relative;left:55em;width:auto;float:right;">
+                                   
+                                        <li>
+                                            <a class="nav-link waves-effect waves-light" style="text-align:center;color:#3CB371;"><i class="fa fa-heartbeat" style="font-size:18px;color:#3CB371;"></i><br/>Hopitaux</a>
+                                        
+                                        </li>
+                                                <li>
+                                                    <a class="nav-link waves-effect waves-light" style="text-align:center;color:#3CB371;" href="doctorlist"><i class="fa fa-stethoscope" style="font-size:18px;color:#3CB371;"></i><br/>Medecins</a>
+                                                </li>
+                                        
+                                        </ul>
+                            
+                        </div>
+</nav>
+   <div style="padding:0;margin:0">
+    
+    
+   <div class="viewer" id="map" >
+   <div id="blockLoader">
+    <h5 id="hLoader">Loading View Map</h5><br>
+    <button class="btn btn-default" type="button" style="display:none">
+        RECONNECT
+    </button>
+     <div class="progress" id="bar-progress" style="width:70%;margin:0 auto;">
+        <div class="indeterminate"></div>
+    </div>
+  </div>
+   </div>
+   
+   <div id="streetListControl" style="width:auto;display:none;z-index:9999;position:absolute;top:4.7em;">
+   <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Streets List
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu4" style="width:300px;height:auto;padding:1em;">
+       
+        <input type="search" ng-model="query" placeholder="&#xf041; Search" style="font-family:Arial, FontAwesome;padding:0.3em"/>
+
+        <div style="height:300px;overflow:auto;padding-left:1.5em;">
+        <ul style="list-style:none;" ng-repeat="street in listStreets|filter:query" style="padding:3em;">
+            <a href="" class="cursor-hover">
+            <li style="cursor:pointer" ng-click="searchStreet(street.name)">{{street.name}}</li>
+            
+            </a>
+           
+        </ul>
+        </div>
+    </div>
+</div>
+   </div>
+   <div class="container" id="tabHospital" style="display:none;">
+   <h4 style="padding:5">{{labelHospital}}</h4>
+    <input type="text" id="form1" ng-model="query2" class="form-control">
+   <table  class="table" style="font-size:12px;">
+
+   <tr style="font-weight:bold;">
+   <td>Nom</td>
+   <td>Phone</td>
+   <td>Distance</td>
+   </tr>
+    <tr ng-repeat="h in testList |filter:query2">
+    <td>{{h.name}}</td>
+    <td>0994601031</td>
+    <td>12m</td>
+    </tr>
+    </table>
+   </div>
+    
+   </div>
+
+
+   <!--Footer-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP9uC59trgnnth3AJiMrJk29KR-JcqWRw"></script>
+      <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="assets/js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+   
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/controller.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+     <script>
+        $('.selectpicker').selectpicker({
+            style: 'btn-info',
+            size: 4
+        });
+     </script>
+</body>
+</html>

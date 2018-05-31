@@ -1,0 +1,25 @@
+{
+  "name": "afyaplatform",
+  "version": "1.0.0",
+  "description": "A service afya for a mobile client",
+  "main": " start app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "afya Team",
+  "license": "Owner Afya Team",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.15.2",
+    "ipware": "^1.0.0",
+    "jade": "^1.11.0",
+    "modernizr": "^3.3.1",
+    "mysql": "^2.11.1",
+    "node-fetch": "^1.7.1",
+    "redis": "^2.6.2",
+    "socket.io": "^2.0.4"
+  }
+}

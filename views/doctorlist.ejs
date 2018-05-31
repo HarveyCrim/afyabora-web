@@ -1,0 +1,413 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Afya Plateform</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="assets/css/mdb.min.css" rel="stylesheet">
+    <link href="assets/css/load.css" rel="stylesheet">
+    <style rel="stylesheet">
+    select {
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;       /* remove default arrow */
+}
+select::-ms-expand { 
+    display: none; /* hide the default arrow in ie10 and ie11 */
+} 
+        /* TEMPLATE STYLES */
+        /* Necessary for full page carousel*/
+        #map {
+     
+       height: 100%;
+        width:100%;
+      }
+        html,
+        body {
+            height: 100%;
+        }
+        /* Navigation*/
+        
+        .navbar {
+            background-color: transparent;
+        }
+        
+        .top-nav-collapse {
+            background-color: #304a74;
+        }
+        
+        footer.page-footer {
+            background-color: #304a74;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #4285F4;
+            }
+        }
+        
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+        /* Carousel*/
+        
+        .carousel {
+            height: 50%;
+        }
+        
+        @media (max-width: 776px) {
+            .carousel {
+                height: 100%;
+            }
+        }
+        
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        
+        /*Caption*/
+        
+        .flex-center {
+            color: #fff;
+        }
+        .menu-left{
+            position:fixed;
+            width:25%;
+            height:100%;
+            border-right:1px solid silver;
+            display:inline-block;
+            padding:1em;
+        }
+        .viewer{
+            height:100%;
+            width:100%;
+            float:right;
+            display:block;
+            position:fixed;
+        }
+        h1{
+            color:white;
+            text-align:center;
+            position:relative;
+            top:45%;
+        }
+        .bgBasic{
+            background-color:#FFF;
+        }
+        footer{
+            position:relative;
+            bottom:0;
+            width:100%;
+            height:5em;
+            border-top:1px solid silver;
+            display:inline-block;
+            padding:10;
+            color:#3CB371;
+        }
+         .phoney {
+             /*
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(112,112,112)),color-stop(0.51, rgb(94,94,94)),color-stop(0.52, rgb(57,57,57)));
+        background: -moz-linear-gradient(center top,rgb(112,112,112) 0%,rgb(94,94,94) 51%,rgb(57,57,57) 52%);
+      */
+      background-color:white;
+     
+
+      }
+      .phoneytext {
+        text-shadow: 0 -1px 0 #000;
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, arial;
+        font-size: 16px;
+        line-height: 25px;
+        padding: 4px 45px 4px 15px;
+        font-weight: bold;
+      }
+      .phoneytab {
+        text-shadow: 0 -1px 0 #000;
+        color: #fff;
+        font-family: Helvetica Neue, Helvetica, arial;
+        font-size: 18px;
+        background: rgb(112,112,112) !important;
+      }
+      .sort-icon {
+    font-size: 9px;
+    margin-left: 5px;
+}
+
+th {
+    cursor:pointer;
+}
+/* Progress Bar */
+.progress {
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px;
+  background-clip: padding-box;
+  margin: 0.5rem 0 1rem 0;
+  overflow: hidden; }
+  .progress .determinate {
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    bottom: 0;
+    background-color: #5bc0de;
+    transition: width .3s linear; }
+  .progress .indeterminate {
+    background-color: #5bc0de; }
+    .progress .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+              animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+    .progress .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+              animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+              animation-delay: 1.15s; }
+
+@-webkit-keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; } }
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; } }
+@-webkit-keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; } }
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; } }
+
+
+    #blockprogress{
+          background-color:transparent;
+          position: absolute;
+          display: block;
+          opacity: 0.75;
+          width: 12em;
+          height:auto;
+          left: 0.5em;
+          padding: 0.5em;
+          top: 4em;
+          bottom: 0;
+
+    }
+    .legendProgress{
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    input[type=checkbox]{
+      cursor: pointer;
+    }
+    #blockLoader{
+      display: block;
+      position: absolute;
+      width: 100%;
+      margin: 0 auto;
+      top: 12em;
+      height: 4em;
+      padding-top: 1.5em;
+      text-align: center;
+    }
+    </style>
+
+</head>
+
+<body ng-app="afyaApp" ng-controller="afyaDoctor">
+<!--Navbar-->
+<nav class="navbar navbar-toggleable-md navbar-dark bgBasic" style="height:70px;position:fixed;top:0;z-index:9999;width:100%">
+
+    
+         
+         <div class="collapse navbar-collapse"  id="navbarNav3" style="position:fixed;top:0;z-index:9999;width:100%">
+                            
+                            <h4 style="color:#3CB371;position:relative;top:0.30em;width:auto;">afya platform</h4>
+                            <table  style="position:relative;float:right;position:relative;left:55em;">
+                            <tr>
+                              
+                          
+
+                            <td>
+                                    <a href="dashboard" class="nav-link waves-effect waves-light" style="text-align:center;color:#3CB371;"><i class="fa fa-heartbeat" style="font-size:18px;color:#3CB371;"></i><br/>Hopitaux</a>
+                            
+                            </td>
+                            <td>
+                                    <a class="nav-link waves-effect waves-light" style="text-align:center;color:#3CB371;" href="#"><i class="fa fa-stethoscope" style="font-size:18px;color:#3CB371;"></i><br/>Medecins</a>
+                            
+                            </td>
+                          
+                            </tr>
+                            </table>
+                            
+                        </div>
+</nav>
+
+
+
+   
+
+<div style="width:auto;z-index:9999;position:absolute;top:4.7em;display: none;" id="blockstreet">
+   <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Streets List
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu4" style="width:300px;height:auto;padding:1em;">
+       
+        <input type="search" ng-model="query" placeholder="&#xf041; Search" style="font-family:Arial, FontAwesome;padding:0.3em"/>
+
+        <div style="height:300px;overflow:auto;padding-left:1.5em;">
+        <ul style="list-style:none;" ng-repeat="street in listStreets|filter:query" style="padding:3em;">
+            <a href="" class="cursor-hover">
+            <li style="cursor:pointer" ng-click="searchStreet(street.name)">{{street.name}}</li>
+            
+            </a>
+           
+        </ul>
+        </div>
+    </div>
+</div>
+ <div id="blockprogress"  style="display: none;">
+<input type="checkbox" checked value="Cardiologists" id="Cardiologists" />
+  <label class="legendProgress" for="Cardiologists">
+     Cardiologists
+  </label>
+     <div class="progress">
+
+    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+  
+<input type="checkbox" checked value="Gynecologists" id="Gynecologists" />
+<label class="legendProgress" for="Gynecologists">
+    Gynecologists
+  </label>
+<div class="progress">
+    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<input type="checkbox" checked value="Physiotherapist" id="Physiotherapist" />
+<label id="Physiotherapist" title="30%" class="legendProgress">
+    Physiotherapist
+  </label>
+<div class="progress">
+    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<input type="checkbox" checked value="Dermatologist" id="Dermatologist" />
+<label for="Dermatologist" class="legendProgress">
+    Dermatologist
+  </label>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<input type="checkbox" checked value="Others" id="Others" />
+<span class="legendProgress">
+    Ophthalmologist
+  </span>
+<div class="progress">
+    <div class="progress-bar" style="background-color:#8B4513" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+   </div>
+   </div>
+  
+
+<div id="map">
+  <div id="blockLoader">
+    <h5>Loading View Map</h5><br>
+     <div class="progress" style="width:70%;margin:0 auto;">
+        <div class="indeterminate"></div>
+    </div>
+  </div>
+</div>
+
+
+
+        
+    <!--Section: Live preview-->
+   <!--Footer-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP9uC59trgnnth3AJiMrJk29KR-JcqWRw"></script>
+<script type="text/javascript" src="assets/js/infobubble.js"></script>
+      <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="assets/js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+   <script src="http://localhost:8000/socket.io/socket.io.js" type="application/javascript"></script>
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/controllerdoctor.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+     <script type="text/javascript">
+     $(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+
+     </script>
+     
+</body>
+</html>
